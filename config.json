@@ -1,0 +1,12 @@
+{
+  "METHOD" : "PIS",
+  "CLASS_IMBALANCE" : 0.2,
+  "TRAINING_TEST_IMBALANCE" : 0.7,
+  "N_ORDERS" : 0.2,
+  "DATASETS" : ["concrete_data"],
+  "REPETITIONS" : 10,
+  "REGULARIZATION" : "no",
+  "REG_PARAM" : 0.1,
+  "WITH_REPLACEMENT" : "no"
+
+}

@@ -1,0 +1,7 @@
+output/
+__pycache__/
+test.py
+.ipynb_checkpoints/
+*.ipynb
+.DS_Store
+.idea/
