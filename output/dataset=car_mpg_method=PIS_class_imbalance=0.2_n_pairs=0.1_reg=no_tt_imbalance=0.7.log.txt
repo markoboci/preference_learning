@@ -1,0 +1,45 @@
+DATASET: car_mpg
+METHOD: PIS
+NUMBER OF PAIRS (N_ORDERS): 0.1
+CLASS IMBALANCE: 0.2
+TRAINING/TEST IMBALANCE: 0.7
+REPETITIONS: 5
+WITH REPLACEMENT: no
+REGULARIZATION PARAM: 0.1
+REGULARIZATION: no
+
+Number of instances in training set: 270
+Number of instances in test set: 117
+Number of pairs in training set: 994
+Number of pairs in test set: 194
+
+
+1. iteration
+AUC (PLIS): 0.9639
+AUC (LogReg): 0.9613
+
+
+2. iteration
+AUC (PLIS): 0.9825
+AUC (LogReg): 0.9696
+
+
+3. iteration
+AUC (PLIS): 0.9443
+AUC (LogReg): 0.933
+
+
+4. iteration
+AUC (PLIS): 0.9588
+AUC (LogReg): 0.949
+
+
+5. iteration
+AUC (PLIS): 0.9804
+AUC (LogReg): 0.9737
+
+
+PLIS mean AUC: 0.9659793814432989
+PLIS std AUC: 0.01418041143426753
+Logistic regression mean AUC: 0.9573195876288659
+Logistic regression std AUC: 0.014812391798483952

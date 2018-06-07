@@ -1,0 +1,45 @@
+DATASET: breast_cancer
+METHOD: PIS
+NUMBER OF PAIRS (N_ORDERS): 0.1
+CLASS IMBALANCE: 1
+TRAINING/TEST IMBALANCE: 0.7
+REPETITIONS: 5
+WITH REPLACEMENT: no
+REGULARIZATION PARAM: 0.1
+REGULARIZATION: no
+
+Number of instances in training set: 116
+Number of instances in test set: 50
+Number of pairs in training set: 336
+Number of pairs in test set: 62
+
+
+1. iteration
+AUC (PLIS): 0.8384
+AUC (LogReg): 0.812
+
+
+2. iteration
+AUC (PLIS): 0.72
+AUC (LogReg): 0.7376
+
+
+3. iteration
+AUC (PLIS): 0.7792
+AUC (LogReg): 0.7632
+
+
+4. iteration
+AUC (PLIS): 0.776
+AUC (LogReg): 0.7416
+
+
+5. iteration
+AUC (PLIS): 0.6848
+AUC (LogReg): 0.7152
+
+
+PLIS mean AUC: 0.75968
+PLIS std AUC: 0.05296362525356438
+Logistic regression mean AUC: 0.7539199999999999
+Logistic regression std AUC: 0.03279258452760315

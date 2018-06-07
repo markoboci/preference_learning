@@ -1,0 +1,45 @@
+DATASET: abalone_data
+METHOD: PIS
+NUMBER OF PAIRS (N_ORDERS): 0.1
+CLASS IMBALANCE: 0.3
+TRAINING/TEST IMBALANCE: 0.7
+REPETITIONS: 5
+WITH REPLACEMENT: yes
+REGULARIZATION PARAM: 0.1
+REGULARIZATION: no
+
+Number of instances in training set: 2519
+Number of instances in test set: 1082
+Number of pairs in training set: 112597
+Number of pairs in test set: 20800
+
+
+1. iteration
+AUC (PLIS): 0.886
+AUC (LogReg): 0.8984
+
+
+2. iteration
+AUC (PLIS): 0.8894
+AUC (LogReg): 0.9067
+
+
+3. iteration
+AUC (PLIS): 0.8721
+AUC (LogReg): 0.8849
+
+
+4. iteration
+AUC (PLIS): 0.8854
+AUC (LogReg): 0.897
+
+
+5. iteration
+AUC (PLIS): 0.883
+AUC (LogReg): 0.8962
+
+
+PLIS mean AUC: 0.8831701923076924
+PLIS std AUC: 0.005894965288654198
+Logistic regression mean AUC: 0.8966519230769231
+Logistic regression std AUC: 0.006962132491655218

@@ -1,0 +1,45 @@
+DATASET: concrete_data
+METHOD: PIS
+NUMBER OF PAIRS (N_ORDERS): 0.1
+CLASS IMBALANCE: 1
+TRAINING/TEST IMBALANCE: 0.7
+REPETITIONS: 5
+WITH REPLACEMENT: no
+REGULARIZATION PARAM: 0.1
+REGULARIZATION: no
+
+Number of instances in training set: 412
+Number of instances in test set: 178
+Number of pairs in training set: 4243
+Number of pairs in test set: 792
+
+
+1. iteration
+AUC (PLIS): 0.9052
+AUC (LogReg): 0.9357
+
+
+2. iteration
+AUC (PLIS): 0.9219
+AUC (LogReg): 0.9599
+
+
+3. iteration
+AUC (PLIS): 0.9508
+AUC (LogReg): 0.9496
+
+
+4. iteration
+AUC (PLIS): 0.8863
+AUC (LogReg): 0.9433
+
+
+5. iteration
+AUC (PLIS): 0.9086
+AUC (LogReg): 0.9543
+
+
+PLIS mean AUC: 0.914530993561419
+PLIS std AUC: 0.021394548771987387
+Logistic regression mean AUC: 0.9485797247822244
+Logistic regression std AUC: 0.00842488320076911

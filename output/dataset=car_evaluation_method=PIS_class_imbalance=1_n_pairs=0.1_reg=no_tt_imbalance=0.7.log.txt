@@ -1,0 +1,45 @@
+DATASET: car_evaluation
+METHOD: PIS
+NUMBER OF PAIRS (N_ORDERS): 0.1
+CLASS IMBALANCE: 1
+TRAINING/TEST IMBALANCE: 0.7
+REPETITIONS: 5
+WITH REPLACEMENT: no
+REGULARIZATION PARAM: 0.1
+REGULARIZATION: no
+
+Number of instances in training set: 186
+Number of instances in test set: 82
+Number of pairs in training set: 864
+Number of pairs in test set: 168
+
+
+1. iteration
+AUC (PLIS): 0.9869
+AUC (LogReg): 0.9649
+
+
+2. iteration
+AUC (PLIS): 0.9833
+AUC (LogReg): 0.9697
+
+
+3. iteration
+AUC (PLIS): 0.9893
+AUC (LogReg): 0.9709
+
+
+4. iteration
+AUC (PLIS): 0.9774
+AUC (LogReg): 0.9857
+
+
+5. iteration
+AUC (PLIS): 0.9875
+AUC (LogReg): 0.972
+
+
+PLIS mean AUC: 0.98488994646044
+PLIS std AUC: 0.004216548517946326
+Logistic regression mean AUC: 0.9726353361094586
+Logistic regression std AUC: 0.006978169327122069
