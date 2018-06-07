@@ -107,21 +107,34 @@ import numpy as np
 # Breast cancer
 #--------------
 
-df = pd.read_csv('data/breast-cancer.data.txt', header = None)
-df.columns = ['class', 'age', 'menopause', 'tumor_size', 'inv_nodes', 'node_caps', 'deg_malig', 'breast', 'breast_quad', 'irradiat']
-df.drop(columns = ['breast', 'breast_quad', 'irradiat'])
+# # df = pd.read_csv('data/breast-cancer.data.txt', header = None)
+# # df.columns = ['class', 'age', 'menopause', 'tumor_size', 'inv_nodes', 'node_caps', 'deg_malig', 'breast', 'breast_quad', 'irradiat']
+# # df.drop(columns = ['breast', 'breast_quad', 'irradiat'])
+# #
+# #
+# # df['class'] = df['class'].map({'no-recurrence-events': 0, 'recurrence-events': 1})
+# # df['age'] = df['age'].map({'10-19' : 1, '20-29' : 2, '30-39' :3, '40-49' : 4, '50-59' : 5, '60-69' : 6, '70-79' : 7, '80-89' : 8, '90-99' : 9})
+# # df['menopause'] = df['menopause'].map({'lt40' : 1, 'ge40' : 2, 'premeno' : 0})
+# # df['tumor_size'] = df['tumor_size'].map({'0-4' : 1, '5-9' : 2, '10-14' : 3, '15-19' : 4, '20-24' : 5, '25-29' : 6, '30-34' : 7, '35-39' : 8, '40-44' : 9, '45-49' : 10, '50-54' : 11, '55-59' : 12})
+# # df['inv_nodes'] = df['inv_nodes'].map({'0-2' : 1, '3-5' : 2, '6-8' : 3, '9-11' : 4, '12-14' : 5, '15-17' : 6, '18-20' : 7, '21-23' : 8, '24-26' : 9, '27-29' : 10, '30-32' : 11, '33-35' : 12, '36-39' : 13})
+# # df['node_caps'] = df['node_caps'].map({'yes' : 0, 'no' : 1})
+# # df['output'] = df['deg_malig'].map({3 : 2, 2 : 1, 1 : 1})
+# #
+# # df.drop(columns = ['deg_malig', 'breast', 'breast_quad', 'irradiat'], inplace = True)
+# # df.dropna(inplace = True)
+# # print(df.head())
+# # df.to_csv('data/breast_cancer_parsed.csv', header = True, index = False)
 
 
-df['class'] = df['class'].map({'no-recurrence-events': 0, 'recurrence-events': 1})
-df['age'] = df['age'].map({'10-19' : 1, '20-29' : 2, '30-39' :3, '40-49' : 4, '50-59' : 5, '60-69' : 6, '70-79' : 7, '80-89' : 8, '90-99' : 9})
-df['menopause'] = df['menopause'].map({'lt40' : 1, 'ge40' : 2, 'premeno' : 0})
-df['tumor_size'] = df['tumor_size'].map({'0-4' : 1, '5-9' : 2, '10-14' : 3, '15-19' : 4, '20-24' : 5, '25-29' : 6, '30-34' : 7, '35-39' : 8, '40-44' : 9, '45-49' : 10, '50-54' : 11, '55-59' : 12})
-df['inv_nodes'] = df['inv_nodes'].map({'0-2' : 1, '3-5' : 2, '6-8' : 3, '9-11' : 4, '12-14' : 5, '15-17' : 6, '18-20' : 7, '21-23' : 8, '24-26' : 9, '27-29' : 10, '30-32' : 11, '33-35' : 12, '36-39' : 13})
-df['node_caps'] = df['node_caps'].map({'yes' : 0, 'no' : 1})
-df['output'] = df['deg_malig'].map({3 : 2, 2 : 1, 1 : 1})
 
-df.drop(columns = ['deg_malig', 'breast', 'breast_quad', 'irradiat'], inplace = True)
-df.dropna(inplace = True)
+# Abalone data
+#-------------
+
+df = pd.read_csv('data/abalone.data.txt', header = None)
+df.columns = ['sex', 'length', 'diameter', 'height', 'whole_weight', 'shucked_weight', 'viscera_weight', 'shell_weight', 'rings']
+#print(df['rings'].describe())
+df['output'] = pd.Series(pd.cut(np.array(df['rings']), bins = [0, 8, 30], labels = [1, 2]))
+df.drop(columns = ['sex', 'rings'], inplace = True)
+
 print(df.head())
-df.to_csv('data/breast_cancer_parsed.csv', header = True, index = False)
-
+df.to_csv('data/abalone_data_parsed.csv', header = True, index = False)
