@@ -1,0 +1,63 @@
+DATASET: concrete_data
+METHOD: PIS
+NUMBER OF PAIRS (N_ORDERS): 0.2
+CLASS IMBALANCE: 0.2
+TRAINING/TEST IMBALANCE: 0.7
+REPETITIONS: 5
+WITH REPLACEMENT: yes
+REGULARIZATION PARAM: 0.1
+REGULARIZATION: no
+
+Number of instances in training set: 616
+Number of instances in test set: 266
+Number of pairs in training set: 10485
+Number of pairs in test set: 1989
+
+
+1. iteration
+PLIS exec time: 0.297
+AUC (PLIS): 0.8724
+LogReg exec time: 0.0015
+AUC (LogReg): 0.9356
+
+
+2. iteration
+PLIS exec time: 0.353
+AUC (PLIS): 0.8924
+LogReg exec time: 0.0015
+AUC (LogReg): 0.9252
+
+
+3. iteration
+PLIS exec time: 0.427
+AUC (PLIS): 0.9214
+LogReg exec time: 0.0015
+AUC (LogReg): 0.9597
+
+
+4. iteration
+PLIS exec time: 0.449
+AUC (PLIS): 0.8711
+LogReg exec time: 0.0015
+AUC (LogReg): 0.9523
+
+
+5. iteration
+PLIS exec time: 0.382
+AUC (PLIS): 0.9074
+LogReg exec time: 0.0014
+AUC (LogReg): 0.9569
+
+
+PLIS mean AUC test: 0.8929
+PLIS std AUC test: 0.0196
+PLIS mean AUC training: 0.9153
+PLIS std AUC training: 0.0057
+PLIS mean exec time: 0.3816
+PLIS std exec time: 0.054
+LogReg mean AUC test: 0.946
+LogReg std AUC test: 0.0133
+LogReg mean AUC training: 0.954
+LogReg std AUC training: 0.01
+LogReg mean exec time: 0.0015
+LogReg std exec time: 0.0

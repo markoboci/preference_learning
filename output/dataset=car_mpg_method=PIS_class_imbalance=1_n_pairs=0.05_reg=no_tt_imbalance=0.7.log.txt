@@ -1,0 +1,63 @@
+DATASET: car_mpg
+METHOD: PIS
+NUMBER OF PAIRS (N_ORDERS): 0.05
+CLASS IMBALANCE: 1
+TRAINING/TEST IMBALANCE: 0.7
+REPETITIONS: 5
+WITH REPLACEMENT: yes
+REGULARIZATION PARAM: 1
+REGULARIZATION: no
+
+Number of instances in training set: 96
+Number of instances in test set: 42
+Number of pairs in training set: 115
+Number of pairs in test set: 22
+
+
+1. iteration
+PLIS exec time: 0.05
+AUC (PLIS): 1.0
+LogReg exec time: 0.0005
+AUC (LogReg): 0.9841
+
+
+2. iteration
+PLIS exec time: 0.041
+AUC (PLIS): 0.9592
+LogReg exec time: 0.0004
+AUC (LogReg): 0.9615
+
+
+3. iteration
+PLIS exec time: 0.036
+AUC (PLIS): 1.0
+LogReg exec time: 0.0005
+AUC (LogReg): 1.0
+
+
+4. iteration
+PLIS exec time: 0.032
+AUC (PLIS): 0.9683
+LogReg exec time: 0.0005
+AUC (LogReg): 0.9841
+
+
+5. iteration
+PLIS exec time: 0.039
+AUC (PLIS): 0.8707
+LogReg exec time: 0.0005
+AUC (LogReg): 0.8753
+
+
+PLIS mean AUC test: 0.9596
+PLIS std AUC test: 0.0474
+PLIS mean AUC training: 0.9678
+PLIS std AUC training: 0.0113
+PLIS mean exec time: 0.0396
+PLIS std exec time: 0.006
+LogReg mean AUC test: 0.961
+LogReg std AUC test: 0.0446
+LogReg mean AUC training: 0.9758
+LogReg std AUC training: 0.0154
+LogReg mean exec time: 0.0005
+LogReg std exec time: 0.0

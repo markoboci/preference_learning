@@ -4,8 +4,8 @@ NUMBER OF PAIRS (N_ORDERS): 0.1
 CLASS IMBALANCE: 1
 TRAINING/TEST IMBALANCE: 0.7
 REPETITIONS: 5
-WITH REPLACEMENT: no
-REGULARIZATION PARAM: 0.1
+WITH REPLACEMENT: yes
+REGULARIZATION PARAM: 0.01
 REGULARIZATION: no
 
 Number of instances in training set: 1968
@@ -15,31 +15,49 @@ Number of pairs in test set: 17892
 
 
 1. iteration
-AUC (PLIS): 0.8703
-AUC (LogReg): 0.8928
+PLIS exec time: 2.643
+AUC (PLIS): 0.8925
+LogReg exec time: 0.003
+AUC (LogReg): 0.9078
 
 
 2. iteration
-AUC (PLIS): 0.8978
-AUC (LogReg): 0.9142
+PLIS exec time: 2.632
+AUC (PLIS): 0.8864
+LogReg exec time: 0.0039
+AUC (LogReg): 0.9001
 
 
 3. iteration
-AUC (PLIS): 0.8706
-AUC (LogReg): 0.8829
+PLIS exec time: 2.825
+AUC (PLIS): 0.8787
+LogReg exec time: 0.0032
+AUC (LogReg): 0.894
 
 
 4. iteration
-AUC (PLIS): 0.8702
-AUC (LogReg): 0.8875
+PLIS exec time: 2.921
+AUC (PLIS): 0.9023
+LogReg exec time: 0.0058
+AUC (LogReg): 0.9199
 
 
 5. iteration
-AUC (PLIS): 0.8921
-AUC (LogReg): 0.9051
+PLIS exec time: 2.143
+AUC (PLIS): 0.8939
+LogReg exec time: 0.0034
+AUC (LogReg): 0.9055
 
 
-PLIS mean AUC: 0.8801904666096607
-PLIS std AUC: 0.01217667894723817
-Logistic regression mean AUC: 0.8965075532753215
-Logistic regression std AUC: 0.011545738856486843
+PLIS mean AUC test: 0.8908
+PLIS std AUC test: 0.0079
+PLIS mean AUC training: 0.8908
+PLIS std AUC training: 0.0034
+PLIS mean exec time: 2.6328
+PLIS std exec time: 0.2683
+LogReg mean AUC test: 0.9055
+LogReg std AUC test: 0.0086
+LogReg mean AUC training: 0.9075
+LogReg std AUC training: 0.0037
+LogReg mean exec time: 0.0039
+LogReg std exec time: 0.001

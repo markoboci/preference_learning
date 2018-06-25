@@ -16,10 +16,22 @@ instances_training = []
 instances_test = []
 pairs_training = []
 pairs_test = []
-plis_auc_mean = []
-plis_auc_sd = []
-logreg_auc_mean = []
-logreg_auc_sd = []
+
+# PLIS
+plis_auc_mean_test = []
+plis_auc_sd_test = []
+plis_auc_mean_training = []
+plis_auc_sd_training = []
+plis_exec_time_mean = []
+plis_exec_time_sd = []
+
+# LogReg
+logreg_auc_mean_test = []
+logreg_auc_sd_test = []
+logreg_auc_mean_training = []
+logreg_auc_sd_training = []
+logreg_exec_time_mean = []
+logreg_exec_time_sd = []
 
 
 for _file in all_files:
@@ -59,18 +71,47 @@ for _file in all_files:
             if line.startswith("Number of pairs in test"):
                 pairs_test.append(line.replace("Number of pairs in test set: ", ""))
                 continue
-            if line.startswith("PLIS mean"):
-                plis_auc_mean.append(line.replace("PLIS mean AUC: ", "")[0:6])
+
+            # PLIS
+            if line.startswith("PLIS mean AUC test"):
+                plis_auc_mean_test.append(line.replace("PLIS mean AUC test: ", "")[0:6])
                 continue
-            if line.startswith("PLIS std"):
-                plis_auc_sd.append(line.replace("PLIS std AUC: ", "")[0:6])
+            if line.startswith("PLIS std AUC test"):
+                plis_auc_sd_test.append(line.replace("PLIS std AUC test: ", "")[0:6])
                 continue
-            if line.startswith("Logistic regression mean"):
-                logreg_auc_mean.append(line.replace("Logistic regression mean AUC: ", "")[0:6])
+            if line.startswith("PLIS mean AUC training"):
+                plis_auc_mean_training.append(line.replace("PLIS mean AUC training: ", "")[0:6])
                 continue
-            if line.startswith("Logistic regression std"):
-                logreg_auc_sd.append(line.replace("Logistic regression std AUC: ", "")[0:6])
+            if line.startswith("PLIS std AUC training"):
+                plis_auc_sd_training.append(line.replace("PLIS std AUC training: ", "")[0:6])
                 continue
+            if line.startswith("PLIS mean exec time"):
+                plis_exec_time_mean.append(line.replace("PLIS mean exec time: ", "")[0:6])
+                continue
+            if line.startswith("PLIS std exec time"):
+                plis_exec_time_sd.append(line.replace("PLIS std exec time: ", "")[0:6])
+                continue
+
+            # LogReg
+            if line.startswith("LogReg mean AUC test"):
+                logreg_auc_mean_test.append(line.replace("LogReg mean AUC test: ", "")[0:6])
+                continue
+            if line.startswith("LogReg std AUC test"):
+                logreg_auc_sd_test.append(line.replace("LogReg std AUC test: ", "")[0:6])
+                continue
+            if line.startswith("LogReg mean AUC training"):
+                logreg_auc_mean_training.append(line.replace("LogReg mean AUC training: ", "")[0:6])
+                continue
+            if line.startswith("LogReg std AUC training"):
+                logreg_auc_sd_training.append(line.replace("LogReg std AUC training: ", "")[0:6])
+                continue
+            if line.startswith("LogReg mean exec time"):
+                logreg_exec_time_mean.append(line.replace("LogReg mean exec time: ", "")[0:6])
+                continue
+            if line.startswith("LogReg std exec time"):
+                logreg_exec_time_sd.append(line.replace("LogReg std exec time: ", "")[0:6])
+                continue
+
 
 # create dataframe
 df = pd.DataFrame({'dataset' : dataset,
@@ -84,18 +125,30 @@ df = pd.DataFrame({'dataset' : dataset,
                    'instances_test' : instances_test,
                    'pairs_training' : pairs_training,
                    'pairs_test' : pairs_test,
-                   'plis_auc_mean' : plis_auc_mean,
-                   'plis_auc_sd' : plis_auc_sd,
-                   'logreg_auc_mean' : logreg_auc_mean,
-                   'logreg_auc_sd' : logreg_auc_sd})
+                   'plis_auc_mean_test' : plis_auc_mean_test,
+                   'plis_auc_sd_test' : plis_auc_sd_test,
+                   'plis_auc_mean_training' : plis_auc_mean_training,
+                   'plis_auc_sd_training' : plis_auc_sd_training,
+                   'plis_exec_time_mean' : plis_exec_time_mean,
+                   'plis_exec_time_sd' : plis_exec_time_sd,
+                   'logreg_auc_mean_test' : logreg_auc_mean_test,
+                   'logreg_auc_sd_test' : logreg_auc_sd_test,
+                   'logreg_auc_mean_training' : logreg_auc_mean_training,
+                   'logreg_auc_sd_training' : logreg_auc_sd_training,
+                   'logreg_exec_time_mean' : logreg_exec_time_mean,
+                   'logreg_exec_time_sd' : logreg_exec_time_sd})
+
 
 # rearrange columns in dataframe
-cols = ['method', 'dataset', 'class_imbalance', 'plis_auc_mean', 'plis_auc_sd', 'logreg_auc_mean', 'logreg_auc_sd',
-        'number_of_pairs', 'repetitions', 'with_replacement', 'regularization', 'instances_training', 'instances_test', 'pairs_training', 'pairs_test']
+cols = ['method', 'dataset', 'class_imbalance', 'number_of_pairs', 'plis_auc_mean_test', 'plis_auc_sd_test', 'logreg_auc_mean_test',
+        'logreg_auc_sd_test', 'plis_auc_mean_training', 'plis_auc_sd_training', 'logreg_auc_mean_training', 'logreg_auc_sd_training',
+        'repetitions', 'with_replacement', 'regularization', 'instances_training', 'instances_test', 'pairs_training', 'pairs_test',
+        'plis_exec_time_mean', 'plis_exec_time_sd', 'logreg_exec_time_mean', 'logreg_exec_time_sd']
+
 df = df[cols]
 
 # sort dataframe
-df = df.sort_values(by = ['method', 'class_imbalance', 'dataset'])
+df = df.sort_values(by = ['method', 'class_imbalance', 'number_of_pairs', 'dataset'])
 
 # write dataframe to a file
 df.to_csv('output/summarized_results.csv', header = True, index = False)

@@ -258,7 +258,7 @@ def make_folds(list_, k):
     l = len(list_)
     return [list_[i * l // k : (i+1) * l // k] for i in range(k)]
 
-def determine_alpha(training_instances, replace = 'no', n_orders = 0.2, n_folds = 5, reg_params = [0.0001, 0.001, 0.01, 0.1, 1, 10], method = 'PIS'):
+def determine_alpha(training_instances, replace = 'no', n_orders = 0.2, n_folds = 5, reg_params = [0.001, 0.01, 0.1, 1, 10, 100], method = 'PIS'):
 
     cv_auc = {key: 0 for key in reg_params}
 

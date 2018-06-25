@@ -1,12 +1,12 @@
 {
   "METHOD" : "PIS",
-  "CLASS_IMBALANCE" : 0.2,
+  "CLASS_IMBALANCE" : [0.05, 0.1, 0.2, 0.5, 1],
   "TRAINING_TEST_IMBALANCE" : 0.7,
-  "N_ORDERS" : 0.2,
-  "DATASETS" : ["concrete_data"],
-  "REPETITIONS" : 10,
+  "N_ORDERS" : [0.05, 0.1, 0.2, 0.5, 1 ],
+  "DATASETS" : ["abalone_data"],
+  "REPETITIONS" : 5,
   "REGULARIZATION" : "no",
-  "REG_PARAM" : 0.1,
-  "WITH_REPLACEMENT" : "no"
+  "REG_PARAM" : 0.01,
+  "WITH_REPLACEMENT" : "yes"
 
 }

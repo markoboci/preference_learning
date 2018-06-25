@@ -1,0 +1,63 @@
+DATASET: breast_cancer
+METHOD: PIS
+NUMBER OF PAIRS (N_ORDERS): 0.05
+CLASS IMBALANCE: 0.1
+TRAINING/TEST IMBALANCE: 0.7
+REPETITIONS: 5
+WITH REPLACEMENT: yes
+REGULARIZATION PARAM: 0.1
+REGULARIZATION: no
+
+Number of instances in training set: 149
+Number of instances in test set: 65
+Number of pairs in training set: 88
+Number of pairs in test set: 17
+
+
+1. iteration
+PLIS exec time: 0.034
+AUC (PLIS): 0.5989
+LogReg exec time: 0.0005
+AUC (LogReg): 0.5593
+
+
+2. iteration
+PLIS exec time: 0.033
+AUC (PLIS): 0.9294
+LogReg exec time: 0.0005
+AUC (LogReg): 0.8969
+
+
+3. iteration
+PLIS exec time: 0.041
+AUC (PLIS): 0.7429
+LogReg exec time: 0.0005
+AUC (LogReg): 0.7966
+
+
+4. iteration
+PLIS exec time: 0.051
+AUC (PLIS): 0.5593
+LogReg exec time: 0.0005
+AUC (LogReg): 0.6624
+
+
+5. iteration
+PLIS exec time: 0.033
+AUC (PLIS): 0.7881
+LogReg exec time: 0.0005
+AUC (LogReg): 0.7316
+
+
+PLIS mean AUC test: 0.7237
+PLIS std AUC test: 0.1337
+PLIS mean AUC training: 0.7117
+PLIS std AUC training: 0.0529
+PLIS mean exec time: 0.0384
+PLIS std exec time: 0.007
+LogReg mean AUC test: 0.7294
+LogReg std AUC test: 0.1149
+LogReg mean AUC training: 0.7331
+LogReg std AUC training: 0.0386
+LogReg mean exec time: 0.0005
+LogReg std exec time: 0.0

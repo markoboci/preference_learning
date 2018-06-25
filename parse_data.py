@@ -130,11 +130,33 @@ import numpy as np
 # Abalone data
 #-------------
 
-df = pd.read_csv('data/abalone.data.txt', header = None)
-df.columns = ['sex', 'length', 'diameter', 'height', 'whole_weight', 'shucked_weight', 'viscera_weight', 'shell_weight', 'rings']
-#print(df['rings'].describe())
-df['output'] = pd.Series(pd.cut(np.array(df['rings']), bins = [0, 8, 30], labels = [1, 2]))
-df.drop(columns = ['sex', 'rings'], inplace = True)
+# # df = pd.read_csv('data/raw_datasets/abalone.data.txt', header = None)
+# # df.columns = ['sex', 'length', 'diameter', 'height', 'whole_weight', 'shucked_weight', 'viscera_weight', 'shell_weight', 'rings']
+# # #print(df['rings'].describe())
+# # df['output'] = pd.Series(pd.cut(np.array(df['rings']), bins = [0, 8, 30], labels = [1, 2]))
+# # df.drop(columns = ['sex', 'rings'], inplace = True)
+# #
+# # print(df.head())
+# # df.to_csv('data/abalone_data_parsed.csv', header = True, index = False)
 
-print(df.head())
-df.to_csv('data/abalone_data_parsed.csv', header = True, index = False)
+
+
+# Nursery data - NOT USED
+#------------------------
+
+# # df = pd.read_csv('data/raw_datasets/nursery.data.txt')
+# # df.columns = ['parents', 'has_nurs', 'form', 'children', 'housing', 'finance', 'social', 'health', 'output']
+# #
+# # # mapping values
+# # df['parents'] = df['parents'].map({'great_pret': 1, 'pretentious': 2, 'usual' : 3})
+# # df['has_nurs'] = df['has_nurs'].map({'very_crit': 1, 'critical': 2, 'improper' : 3, 'less_proper' : 4, 'proper' : 5})
+# # df['form'] = df['form'].map({'foster': 1, 'incomplete': 2, 'completed' : 3, 'complete' : 4})
+# # df['children'] = df['children'].map({'1': 1, '2': 2, '3' : 3, 'more' : 4})
+# # df['housing'] = df['housing'].map({'critical': 1, 'less_conv': 2, 'convenient' : 3})
+# # df['finance'] = df['finance'].map({'inconv': 1, 'convenient': 2})
+# # df['social'] = df['social'].map({'problematic': 1, 'slightly_prob': 2, 'nonprob' : 3})
+# # df['health'] = df['health'].map({'not_recom': 1, 'priority': 2, 'recommended' : 3})
+# # df['output'] = df['output'].map({'not_recom': 1, 'recommend': 2, 'very_recom' : 2, 'priority' : 2, 'spec_prior' : 2})
+# #
+# # print(df.head())
+# # df.to_csv('data/nursery_data_parsed.csv', header = True, index = False)

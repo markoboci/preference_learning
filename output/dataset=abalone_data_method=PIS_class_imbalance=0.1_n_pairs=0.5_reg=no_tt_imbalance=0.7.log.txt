@@ -1,0 +1,63 @@
+DATASET: abalone_data
+METHOD: PIS
+NUMBER OF PAIRS (N_ORDERS): 0.5
+CLASS IMBALANCE: 0.1
+TRAINING/TEST IMBALANCE: 0.7
+REPETITIONS: 5
+WITH REPLACEMENT: yes
+REGULARIZATION PARAM: 0.01
+REGULARIZATION: no
+
+Number of instances in training set: 2131
+Number of instances in test set: 916
+Number of pairs in training set: 187017
+Number of pairs in test set: 34944
+
+
+1. iteration
+PLIS exec time: 3.609
+AUC (PLIS): 0.8699
+LogReg exec time: 0.0036
+AUC (LogReg): 0.8777
+
+
+2. iteration
+PLIS exec time: 6.46
+AUC (PLIS): 0.8879
+LogReg exec time: 0.0042
+AUC (LogReg): 0.8995
+
+
+3. iteration
+PLIS exec time: 5.998
+AUC (PLIS): 0.8964
+LogReg exec time: 0.0034
+AUC (LogReg): 0.8881
+
+
+4. iteration
+PLIS exec time: 3.993
+AUC (PLIS): 0.8932
+LogReg exec time: 0.0035
+AUC (LogReg): 0.9123
+
+
+5. iteration
+PLIS exec time: 6.615
+AUC (PLIS): 0.8875
+LogReg exec time: 0.005
+AUC (LogReg): 0.8964
+
+
+PLIS mean AUC test: 0.887
+PLIS std AUC test: 0.0092
+PLIS mean AUC training: 0.8927
+PLIS std AUC training: 0.0116
+PLIS mean exec time: 5.335
+PLIS std exec time: 1.2746
+LogReg mean AUC test: 0.8948
+LogReg std AUC test: 0.0115
+LogReg mean AUC training: 0.9109
+LogReg std AUC training: 0.0133
+LogReg mean exec time: 0.0039
+LogReg std exec time: 0.0006
